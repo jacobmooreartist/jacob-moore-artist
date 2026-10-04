@@ -16,7 +16,7 @@ export function SiteFooter() {
         <a href={ETSY_URL} target="_blank" rel="noreferrer">
           Etsy
         </a>
-        <Link to="/contact">Contact</Link>
+        <Link to="/contact">Studio inquiries</Link>
       </nav>
       <p>© {new Date().getFullYear()} Jacob Moore Artist</p>
     </footer>
