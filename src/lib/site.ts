@@ -1,4 +1,4 @@
-export const SITE_URL = "https://jacobmooreartist.com";
+export const SITE_URL = "https://www.jacobmooreartist.com";
 export const ARTIST = "Jacob Moore";
 export const EMAIL = "jacob.moore06@gmail.com";
 export const INSTAGRAM_URL = "https://www.instagram.com/jacobmooreartist/";
@@ -26,8 +26,8 @@ export const works: Work[] = [
     width: 1200,
     height: 1600,
     alt: "Forged topography. A spiral of raised metal ridges.",
-    summary: "",
-    body: "",
+    summary: "A forged metal shell sculpture with raised ridges and a spiral form.",
+    body: "A spiral of raised metal ridges gives this shell form its depth. The surface catches light and shadow, drawing together the rugged texture of metal and the quiet geometry of the coast.",
   },
   {
     slug: "contour",
@@ -37,8 +37,8 @@ export const works: Work[] = [
     width: 2000,
     height: 1394,
     alt: "Bent contours. Steel wire, two nested forms on a pale wall.",
-    summary: "",
-    body: "",
+    summary: "Nested steel wire forms that explore coastal contours and negative space.",
+    body: "Nested steel wire forms trace an open silhouette. Their contours and the space between them suggest the shifting lines of shoreline and water, while shadows extend the drawing across the wall.",
   },
   {
     slug: "portrait",
@@ -48,8 +48,8 @@ export const works: Work[] = [
     width: 1500,
     height: 2000,
     alt: "Drawing lines. A face in welded steel rod on a pale wall.",
-    summary: "",
-    body: "",
+    summary: "A welded steel rod portrait that turns a drawn line into sculpture.",
+    body: "A face takes shape in welded steel rod. The open framework brings the economy of a drawn line into three dimensions, allowing the wall, light, and shadow to become part of the portrait.",
   },
 ];
 
