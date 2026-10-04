@@ -3,8 +3,7 @@ export const ARTIST = "Jacob Moore";
 export const EMAIL = "jacob.moore06@gmail.com";
 export const INSTAGRAM_URL = "https://www.instagram.com/jacobmooreartist/";
 export const INSTAGRAM_HANDLE = "@jacobmooreartist";
-/** Replace with the live shop URL before the domain cutover. */
-export const ETSY_URL = "https://www.etsy.com/shop/JacobMooreArtist";
+export const ETSY_URL = "https://jacobmooreartist.etsy.com";
 
 export type Work = {
   slug: string;
