@@ -6,9 +6,10 @@ import { pageMeta } from "@/lib/seo";
 
 export const Route = createFileRoute("/work/")({
   head: () => pageMeta({
-    title: "Work — Jacob Moore Artist",
-    description: "Explore the work of Jacob Moore: coastal metalwork, sculpture, architectural pieces, and jewelry.",
+    title: "Metal Sculpture & Jewelry — Jacob Moore Artist",
+    description: "Discover Jacob Moore’s forged forms, coastal contours, line studies, and jewelry. Original metalwork inspired by the Pacific Northwest coast.",
     path: "/work",
+    pageType: "CollectionPage",
   }),
   component: WorkIndex,
 });

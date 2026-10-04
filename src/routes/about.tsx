@@ -5,10 +5,11 @@ import { pageMeta } from "@/lib/seo";
 export const Route = createFileRoute("/about")({
   head: () =>
     pageMeta({
-      title: "About — Jacob Moore Artist",
+      title: "About Jacob Moore — Pacific Northwest Metal Artist",
       description:
         "Raised on the Long Beach Peninsula, Jacob Moore draws inspiration from a coastline shaped by shifting seasons—where ruggedness meets elegance.",
       path: "/about",
+      pageType: "ProfilePage",
     }),
   component: About,
 });

@@ -6,9 +6,9 @@ import { pageMeta } from "@/lib/seo";
 export const Route = createFileRoute("/")({
   head: () =>
     pageMeta({
-      title: "Jacob Moore Artist",
+      title: "Jacob Moore Artist — Coastal Metal Sculpture & Jewelry",
       description:
-        "Jacob Moore Artist. Forged topography, bent contours, and drawing lines.",
+        "Original metal sculpture and jewelry by Jacob Moore. Inspired by the Long Beach Peninsula and the Pacific Northwest coast. Explore the work and inquire with the studio.",
       path: "/",
     }),
   component: Home,

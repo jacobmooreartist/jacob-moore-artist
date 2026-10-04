@@ -1,6 +1,6 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { SiteFrame } from "@/components/site-frame";
-import { artworkJsonLd, pageMeta } from "@/lib/seo";
+import { artworkJsonLd, breadcrumbs, pageMeta } from "@/lib/seo";
 import { getWork, neighbors } from "@/lib/site";
 
 export const Route = createFileRoute("/work/$slug")({
@@ -16,13 +16,14 @@ export const Route = createFileRoute("/work/$slug")({
         title: "Work — Jacob Moore Artist",
         description: "Metalwork by Jacob Moore Artist.",
         path: "/work",
+        noindex: true,
       });
     }
     return pageMeta({
       title: `${work.title} — Jacob Moore Artist`,
-      description: `${work.title}. ${work.material}. Jacob Moore Artist.`,
+      description: `${work.summary} Original sculpture by Jacob Moore, inspired by the Pacific Northwest coast.`,
       path: `/work/${work.slug}`,
-      jsonLd: [artworkJsonLd(work)],
+      jsonLd: [artworkJsonLd(work), breadcrumbs([{ name: "Work", path: "/work" }, { name: work.title, path: `/work/${work.slug}` }])],
     });
   },
   component: WorkDetail,
