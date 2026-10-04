@@ -6,8 +6,8 @@ import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from "@/lib/site";
 const links = [
   { to: "/work", label: "Work" },
   { to: "/about", label: "About" },
-  { to: "/editions", label: "Editions" },
-  { to: "/contact", label: "Contact" },
+  { to: "/gallery", label: "Gallery" },
+  { to: "/contact", label: "Inquire" },
 ] as const;
 
 export function SiteHeader() {

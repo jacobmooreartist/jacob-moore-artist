@@ -1,61 +1,46 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { ArrowUpRight } from "lucide-react";
 import { SiteFrame } from "@/components/site-frame";
 import { gallery } from "@/lib/gallery";
 import { pageMeta } from "@/lib/seo";
-import { works } from "@/lib/site";
 
 export const Route = createFileRoute("/work/")({
-  head: () =>
-    pageMeta({
-      title: "Work — Jacob Moore Artist",
-      description:
-        "Work by Jacob Moore Artist. Forged topography, bent contours, and drawing lines.",
-      path: "/work",
-    }),
+  head: () => pageMeta({
+    title: "Work — Jacob Moore Artist",
+    description: "Explore the work of Jacob Moore: coastal metalwork, sculpture, architectural pieces, and jewelry.",
+    path: "/work",
+  }),
   component: WorkIndex,
 });
 
-const contour = works.find((work) => work.slug === "contour");
-
 function WorkIndex() {
-  const forged = gallery.find((group) => group.id === "forged");
-  const lines = gallery.find((group) => group.id === "lines");
-  const outside = gallery.find((group) => group.id === "outside");
-
   return (
     <SiteFrame>
       <div className="page frame">
-        <p className="kicker">Selected work</p>
+        <p className="kicker">A coastal practice</p>
         <h1 className="display page-title">Work</h1>
-        {forged ? <GalleryBlock group={forged} /> : null}
-        {contour ? (
-          <section className="gallery-group">
-            <h2>
-              <Link to="/work/$slug" params={{ slug: contour.slug }}>
-                {contour.title}
+        <p className="gallery-intro">Rugged forms. Considered lines. A body of work rooted in the land and water of the Pacific Northwest.</p>
+        <div className="collection-grid">
+          {gallery.map((group) => {
+            const shot = group.shots[0];
+            return (
+              <Link key={group.id} to="/gallery" hash={group.id} className="collection-card">
+                <img src={shot.src} width={shot.width} height={shot.height} alt={shot.alt} loading="lazy" />
+                <h2>{group.title} <ArrowUpRight size={20} aria-hidden="true" /></h2>
+                <p>{group.description}</p>
               </Link>
-            </h2>
-            <div className="gallery-grid">
-              <img src={contour.image} width={contour.width} height={contour.height} alt={contour.alt} />
-            </div>
-          </section>
-        ) : null}
-        {lines ? <GalleryBlock group={lines} /> : null}
-        {outside ? <GalleryBlock group={outside} /> : null}
+            );
+          })}
+        </div>
+        <section className="studio-invitation">
+          <div>
+            <p className="kicker">Select commissions</p>
+            <h2>Room for the right work.</h2>
+            <p>A commission begins with a conversation about the piece, its setting, and the time it asks. Share your vision with the studio.</p>
+            <Link className="tide-link" to="/contact">Inquire about a commission <ArrowUpRight size={16} aria-hidden="true" /></Link>
+          </div>
+        </section>
       </div>
     </SiteFrame>
-  );
-}
-
-function GalleryBlock({ group }: { group: (typeof gallery)[number] }) {
-  return (
-    <section className="gallery-group">
-      <h2>{group.title}</h2>
-      <div className="gallery-grid">
-        {group.shots.map((shot) => (
-          <img key={shot.src} src={shot.src} width={shot.width} height={shot.height} alt={shot.alt} />
-        ))}
-      </div>
-    </section>
   );
 }

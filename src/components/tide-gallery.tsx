@@ -73,10 +73,11 @@ export function TideGallery() {
             </article>
           ))}
           <article className="tide-panel letter-panel">
-            <p className="kicker">Contact</p>
-            <h2>The studio</h2>
-            <Link className="btn" to="/contact">
-              Contact the studio
+            <p className="kicker">Select commissions</p>
+            <h2>Room for the right work.</h2>
+            <p>Every commission begins with a considered conversation.</p>
+            <Link className="tide-link" to="/contact">
+              Inquire with the studio <ArrowUpRight size={16} aria-hidden="true" />
             </Link>
           </article>
         </div>
