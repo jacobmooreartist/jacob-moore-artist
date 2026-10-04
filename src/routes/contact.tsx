@@ -13,9 +13,10 @@ export const Route = createFileRoute("/contact")({
   },
   head: () =>
     pageMeta({
-      title: "Inquire — Jacob Moore Artist",
-      description: "Inquire with Jacob Moore’s studio about a work or a select commission.",
+      title: "Art & Commission Inquiries — Jacob Moore Artist",
+      description: "Contact Jacob Moore’s studio about original metal sculpture, jewelry, or a considered commission. Each inquiry is reviewed individually with the studio’s schedule.",
       path: "/contact",
+      pageType: "ContactPage",
     }),
   component: Contact,
 });

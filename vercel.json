@@ -1,3 +1,30 @@
 {
-  "installCommand": "npm install --omit=dev --no-audit --no-fund"
+  "installCommand": "npm install --omit=dev --no-audit --no-fund",
+  "redirects": [
+    {
+      "source": "/editions",
+      "destination": "/gallery",
+      "permanent": true
+    },
+    {
+      "source": "/new-page",
+      "destination": "/gallery#jewelry",
+      "permanent": true
+    },
+    {
+      "source": "/jewelry",
+      "destination": "/gallery#jewelry",
+      "permanent": true
+    },
+    {
+      "source": "/sculpture",
+      "destination": "/work",
+      "permanent": true
+    },
+    {
+      "source": "/links",
+      "destination": "/contact",
+      "permanent": true
+    }
+  ]
 }

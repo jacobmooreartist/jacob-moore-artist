@@ -2,14 +2,17 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { ArrowUpRight } from "lucide-react";
 import { SiteFrame } from "@/components/site-frame";
 import { GalleryView } from "@/components/gallery-view";
-import { pageMeta } from "@/lib/seo";
+import { breadcrumbs, galleryJsonLd, pageMeta } from "@/lib/seo";
+import { gallery } from "@/lib/gallery";
 import { ETSY_URL } from "@/lib/site";
 
 export const Route = createFileRoute("/gallery")({
   head: () => pageMeta({
-    title: "Gallery — Jacob Moore Artist",
+    title: "Sculpture & Jewelry Gallery — Jacob Moore Artist",
     description: "Explore Jacob Moore’s coastal metalwork: forged forms, contours, line studies, and jewelry.",
     path: "/gallery",
+    pageType: "CollectionPage",
+    jsonLd: [galleryJsonLd(gallery), breadcrumbs([{ name: "Gallery", path: "/gallery" }])],
   }),
   component: Gallery,
 });
