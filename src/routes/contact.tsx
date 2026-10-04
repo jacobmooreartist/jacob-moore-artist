@@ -13,8 +13,8 @@ export const Route = createFileRoute("/contact")({
   },
   head: () =>
     pageMeta({
-      title: "Contact — Jacob Moore Artist",
-      description: "Contact Jacob Moore Artist. Instagram @jacobmooreartist.",
+      title: "Inquire — Jacob Moore Artist",
+      description: "Inquire with Jacob Moore’s studio about a work or a select commission.",
       path: "/contact",
     }),
   component: Contact,
@@ -30,8 +30,9 @@ function Contact() {
       <div className="page frame contact-grid">
         <div>
           <p className="kicker">The studio</p>
-          <h1 className="display page-title">Contact</h1>
-          <p>Write through the form. It opens in your own mail.</p>
+          <h1 className="display page-title">Inquire</h1>
+          <p>For a work that stays with you. Or one yet to take shape.</p>
+          <p>Commission inquiries are considered individually, according to the project and the studio’s schedule. Share your vision, intended setting, and preferred timing.</p>
           <p>
             <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
               Instagram {INSTAGRAM_HANDLE}
@@ -69,7 +70,7 @@ function Contact() {
             <span className="kicker">Regarding</span>
             <select name="interest" defaultValue={work ? "A specific work" : "Commission"}>
               <option>Commission</option>
-              <option>Edition</option>
+              <option>Jewelry or smaller work</option>
               <option>A specific work</option>
               <option>Something else</option>
             </select>
@@ -83,12 +84,12 @@ function Contact() {
             />
           </label>
           <button className="btn" type="submit">
-            Open the letter
+            Prepare inquiry
           </button>
           <p className="note" role="status">
             {ready
               ? "Your letter is open in your mail app, addressed to Jacob."
-              : "This opens your own email, already addressed. Nothing is stored on the site."}
+              : "Opens your email app with a draft addressed to Jacob. Review and send it there."}
           </p>
         </form>
       </div>
