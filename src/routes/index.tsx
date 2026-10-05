@@ -2,6 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { SiteFrame } from "@/components/site-frame";
 import { TideGallery } from "@/components/tide-gallery";
 import { pageMeta } from "@/lib/seo";
+import { ArtistName } from "@/components/artist-name";
 
 export const Route = createFileRoute("/")({
   head: () =>
@@ -18,7 +19,7 @@ function Home() {
   return (
     <SiteFrame>
       <section className="intro">
-        <h1>Jacob Moore Artist</h1>
+        <h1><ArtistName /></h1>
         <blockquote className="intro-quote">
           <p>Spring forth. Tides of change.</p>
           <p>Summer fog banks. A coast slowed down.</p>
