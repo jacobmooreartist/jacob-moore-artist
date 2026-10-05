@@ -5,11 +5,11 @@ import { TideWash } from "./tide-wash";
 
 export function SiteFrame({ children }: { children: ReactNode }) {
   return (
-    <>
+    <div className="site-frame">
       <TideWash />
       <SiteHeader />
       <main id="content">{children}</main>
       <SiteFooter />
-    </>
+    </div>
   );
 }

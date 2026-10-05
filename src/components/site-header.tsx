@@ -2,6 +2,7 @@ import { Link, useRouterState } from "@tanstack/react-router";
 import { Instagram, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { INSTAGRAM_HANDLE, INSTAGRAM_URL } from "@/lib/site";
+import { ArtistName } from "./artist-name";
 
 const links = [
   { to: "/work", label: "Work" },
@@ -20,10 +21,10 @@ export function SiteHeader() {
         Skip to content
       </a>
       <Link to="/" className="wordmark" onClick={() => setOpen(false)}>
-        Jacob Moore Artist
+        <ArtistName />
       </Link>
       <div className="header-end">
-        <a className="ig-link" href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
+        <a className="ig-link" href={INSTAGRAM_URL} target="_blank" rel="noreferrer" aria-label={`Instagram ${INSTAGRAM_HANDLE}`}>
           <Instagram size={18} aria-hidden="true" />
           <span className="ig-handle">{INSTAGRAM_HANDLE}</span>
         </a>

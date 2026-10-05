@@ -1,11 +1,12 @@
 import { Link } from "@tanstack/react-router";
 import { ETSY_URL, INSTAGRAM_HANDLE, INSTAGRAM_URL } from "@/lib/site";
+import { ArtistName } from "./artist-name";
 
 export function SiteFooter() {
   return (
     <footer className="site-footer">
       <p>
-        Jacob Moore Artist
+        <ArtistName />
         <br />
         Metalwork. Pacific Northwest.
       </p>
@@ -18,7 +19,7 @@ export function SiteFooter() {
         </a>
         <Link to="/contact">Studio inquiries</Link>
       </nav>
-      <p>© {new Date().getFullYear()} Jacob Moore Artist</p>
+      <p>© {new Date().getFullYear()} <ArtistName /></p>
     </footer>
   );
 }
